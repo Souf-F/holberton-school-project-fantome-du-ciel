@@ -1,4 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="72" height="80" viewBox="0 0 80 90">
-  <path d="M40 4 L72 22 L72 58 L40 76 L8 58 L8 22 Z" fill="none" stroke="#ffb000" stroke-width="2"/>
-  <text x="40" y="50" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="26" fill="#ffffff" letter-spacing="1">FDC</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo FDC vectoriel</title>
+  <desc id="desc">Logo FDC avec hexagone jaune, symbole jaune et lettres blanches.</desc>
+  <defs>
+    <linearGradient id="goldGradient" x1="84" y1="54" x2="432" y2="458" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffc928"/>
+      <stop offset="55%" stop-color="#ffb800"/>
+      <stop offset="100%" stop-color="#f4a000"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="156" y1="292" x2="356" y2="404" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8e8e8"/>
+    </linearGradient>
+  </defs>
+
+  <polygon points="256.0,42.0 440.0,150.0 440.0,362.0 256.0,470.0 72.0,362.0 72.0,150.0" fill="#050505" stroke="url(#goldGradient)" stroke-width="14" stroke-linejoin="round"/>
+  <path d="
+M 256 129
+L 345 183
+L 407 284
+L 314 249
+L 269 207
+L 256 269
+L 243 207
+L 198 249
+L 105 284
+L 167 183
+Z
+" fill="url(#goldGradient)"/>
+  <path d="M 141.50 293.67 L 199.59 293.67 L 199.59 311.76 L 163.07 311.76 L 163.07 329.02 L 197.42 329.02 L 197.42 347.11 L 163.07 347.11 L 163.07 386.44 L 141.50 386.44 L 141.50 293.67 Z M 241.29 311.76 L 241.29 368.36 L 248.98 368.36 Q 262.16 368.36 269.12 361.09 Q 276.08 353.81 276.08 339.95 Q 276.08 326.18 269.14 318.98 Q 262.22 311.76 248.98 311.76 L 241.29 311.76 Z M 219.72 293.67 L 242.46 293.67 Q 261.47 293.67 270.75 296.69 Q 280.06 299.69 286.70 306.91 Q 292.60 313.19 295.45 321.40 Q 298.31 329.60 298.31 339.95 Q 298.31 350.47 295.45 358.70 Q 292.60 366.93 286.70 373.20 Q 279.98 380.41 270.59 383.43 Q 261.23 386.44 242.46 386.44 L 219.72 386.44 L 219.72 293.67 Z M 381.00 381.35 Q 375.04 384.77 368.61 386.50 Q 362.19 388.25 355.23 388.25 Q 334.36 388.25 322.17 375.28 Q 310.00 362.32 310.00 340.15 Q 310.00 317.91 322.17 304.96 Q 334.36 292.00 355.23 292.00 Q 362.19 292.00 368.61 293.75 Q 375.04 295.48 381.00 298.90 L 381.00 318.08 Q 374.98 313.55 369.17 311.44 Q 363.37 309.34 356.96 309.34 Q 345.41 309.34 338.81 317.55 Q 332.23 325.74 332.23 340.15 Q 332.23 354.51 338.81 362.72 Q 345.41 370.91 356.96 370.91 Q 363.37 370.91 369.17 368.80 Q 374.98 366.67 381.00 362.14 L 381.00 381.35 Z" fill="url(#textGradient)"/>
 </svg>
