@@ -8,7 +8,7 @@
 
 /* Couleur de fond du site entier */
 body {
-  background-color: #0d1117;
+  background-color: #000000;
 }
 
 /* Barre de navigation : logo en haut, liens centrés dessous */
@@ -50,10 +50,10 @@ nav {
   margin-top: 18px;
 }
 
-/* Liens : style + survol bleu accent, crochets [ ] qui apparaissent au hover */
+/* Liens : style + survol ambre, crochets [ ] qui apparaissent au hover */
 .nav-links a {
   position: relative;
-  color: #c2cdda;
+  color: #c7c7cf;
   font-size: 13px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -91,7 +91,7 @@ nav {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background-color: #0d1117;
+  background-color: black;
 }
 
 /* Vidéo de fond */
@@ -104,17 +104,17 @@ nav {
   z-index: 1;
 }
 
-/* Voile dégradé anthracite en haut et en bas de la vidéo */
+/* Voile dégradé noir en haut et en bas de la vidéo */
 .section1-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   background: linear-gradient(
     to bottom,
-    #0d1117 0%,
+    black 0%,
     transparent 25%,
     transparent 75%,
-    #0d1117 100%
+    black 100%
   );
 }
 
@@ -126,6 +126,6 @@ nav {
   transform: translateX(-50%);
   z-index: 3;
   text-align: center;
-  color: #ffffff;
+  color: white;
   font-family: "Raleway", sans-serif;
 }
