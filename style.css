@@ -4,12 +4,14 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+
 }
 
 /* Couleur de fond du site entier */
 body {
   background-color: #000000;
 }
+
 
 /* Barre de navigation : logo en haut, liens centrés dessous */
 nav {
@@ -79,12 +81,14 @@ nav {
 
 .nav-links a:hover {
   color: #6fb5ff;
+
 }
 
 .nav-links a:hover::before,
 .nav-links a:hover::after {
   opacity: 1;
 }
+
 
 /* Section d'accueil en plein écran */
 .section1 {
@@ -128,4 +132,5 @@ nav {
   text-align: center;
   color: white;
   font-family: "Raleway", sans-serif;
+
 }
