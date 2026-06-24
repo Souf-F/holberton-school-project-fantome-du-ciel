@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+
+    <!-- Rend la page responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>Caractéristiques - Fantôme du Ciel</title>
+
+    <!-- CSS commun du site -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS spécifique à la page Caractéristiques -->
+    <link rel="stylesheet" href="caracteristiques.css">
+
+  </head>
+
+  <body>
+    <!-- Header commun à toutes les pages -->
+    <header>
+      <!-- Navigation principale du site -->
+      <nav>
+        <!-- Logo placé à gauche de la barre de navigation -->
+        <img src="assets/logo.svg" alt="Logo FDC" class="nav-logo-img">
+        <span class="nav-logo">Fantôme du Ciel</span>
+
+        <!-- Liens vers les différentes pages du projet -->
+        <div class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="furtivite.html">Furtivité</a>
+          <a href="mission.html">Mission</a>
+          <a href="caracteristiques.html" class="active">Caractéristiques</a>
+          <a href="armement.html">Armement</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+      <!-- Section qui regroupe toutes les caractéristiques importantes du B-2 -->
+      <section class="specs-section" id="caracteristiques">
+        <!-- Bloc d'introduction : texte à gauche et image du B-2 à droite -->
+        <div class="specs-hero">
+          <!-- Texte principal du haut de page -->
+          <div class="specs-hero-text">
+            <p class="specs-kicker">Northrop B-2 Spirit</p>
+            <h1>Caractéristiques</h1>
+            <p class="specs-quote">
+              Deux pilotes, une aile de 52 mètres et assez de carburant pour
+              traverser un continent sans escale.
+            </p>
+            <p class="specs-intro">
+              Le B-2 Spirit mélange la taille d'un bombardier lourd avec une
+              silhouette pensée pour disparaître. Ses chiffres racontent mieux que
+              n'importe quel slogan le paradoxe de cet avion : immense, lourd,
+              armé, mais conçu pour rester difficile à voir.
+            </p>
+          </div>
+
+          <!-- Image décorative du B-2 isolé -->
+          <div class="specs-plane-visual" aria-hidden="true">
+            <div class="plane-tilt-zone top-left"></div>
+            <div class="plane-tilt-zone top-right"></div>
+            <div class="plane-tilt-zone bottom-left"></div>
+            <div class="plane-tilt-zone bottom-right"></div>
+            <div class="plane-tilt-zone top-middle"></div>
+            <div class="plane-tilt-zone bottom-middle"></div>
+            <img src="assets/b2-isolated-clean-cropped.png" alt="">
+          </div>
+        </div>
+
+        <!-- Grille des chiffres et données techniques les plus marquants -->
+        <div class="specs-grid">
+          <!-- Carte large pour mettre en avant l'envergure impressionnante -->
+          <article class="spec-card spec-card-large">
+            <span class="spec-label">Presque l’envergure d’un terrain de football coupé en deux.</span>
+            <strong>52,12 M</strong>
+            <p>
+              Plus large qu'un avion de ligne moyen, mais sans fuselage
+              classique ni dérive verticale : toute la masse est fondue dans
+              l'aile.
+            </p>
+          </article>
+
+          <!-- Charge maximale transportable en soute -->
+          <article class="spec-card">
+            <span class="spec-label">Une charge massive conservée en soute pour garder son profil furtif.</span>
+            <strong>27 216 kg</strong>
+            <p>
+              Jusqu'à 60 000 livres d'armement conventionnel ou nucléaire,
+              gardées en soute pour préserver sa discrétion.
+            </p>
+          </article>
+
+          <!-- Masse maximale au décollage -->
+          <article class="spec-card">
+            <span class="spec-label">Masse au décollage</span>
+            <strong>152 634 kg</strong>
+            <p>
+              Une aile volante capable de quitter le sol avec plus de 336 000
+              livres sur la balance.
+            </p>
+          </article>
+
+          <!-- Quantité de carburant embarquée -->
+          <article class="spec-card">
+            <span class="spec-label">Carburant</span>
+            <strong>75 750 kg</strong>
+            <p>
+              Sa capacité carburant dépasse son poids indiqué à vide : presque
+              la moitié de l'avion au décollage peut être du carburant.
+            </p>
+          </article>
+
+          <!-- Carte haute pour insister sur la portée stratégique -->
+          <article class="spec-card spec-card-tall">
+            <span class="spec-label">Assez pour traverser un continent sans ravitaillement.</span>
+            <strong>9 600 km</strong>
+            <p>
+              Environ 6 000 milles nautiques sans ravitaillement. Avec le
+              ravitaillement en vol, il devient une arme réellement
+              intercontinentale.
+            </p>
+          </article>
+
+          <!-- Altitude maximale d'opération -->
+          <article class="spec-card">
+            <span class="spec-label">Plafond</span>
+            <strong>15 240 m</strong>
+            <p>
+              Il peut opérer à 50 000 pieds, très haut au-dessus de la météo et
+              des menaces les plus basses.
+            </p>
+          </article>
+
+          <!-- Motorisation du bombardier -->
+          <article class="spec-card">
+            <span class="spec-label">Propulsion</span>
+            <strong>4 F118</strong>
+            <p>
+              Quatre moteurs General Electric F118-GE-100, chacun poussant à
+              17 300 livres.
+            </p>
+          </article>
+
+          <!-- Nombre de personnes nécessaires pour le piloter -->
+          <article class="spec-card">
+            <span class="spec-label">Équipage</span>
+            <strong>2</strong>
+            <p>
+              Un pilote et un commandant de mission suffisent pour gérer un
+              bombardier stratégique de cette taille.
+            </p>
+          </article>
+
+          <!-- Carte large pour le coût, donnée très marquante -->
+          <article class="spec-card spec-card-cost">
+            <span class="spec-label">Coût unitaire</span>
+            <strong>1,157 Md $</strong>
+            <p>
+              Prix approximatif en dollars constants de 1998 : chaque appareil
+              coûte plus cher qu'une flotte entière de nombreux avions de combat.
+            </p>
+          </article>
+        </div>
+
+        <!-- Panneau de synthèse : pourquoi ces caractéristiques sont impressionnantes -->
+        <div class="impact-panel" aria-label="Faits marquants">
+          <div>
+            <h2>Ce qui frappe</h2>
+            <p>
+              Le B-2 n'est pas impressionnant parce qu'il va vite. Il choque
+              parce qu'il combine une charge de bombardier lourd, une portée
+              intercontinentale et une signature réduite dans un seul appareil.
+            </p>
+          </div>
+
+          <!-- Liste courte des points à retenir -->
+          <ul class="impact-list">
+            <li>Un seul B-2 peut emporter une charge massive sans armement externe.</li>
+            <li>Son rayon d'action permet des missions depuis très loin de la cible.</li>
+            <li>Son prix reflète une machine rare, complexe et difficile à maintenir.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
