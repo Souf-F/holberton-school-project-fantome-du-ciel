@@ -64,5 +64,5 @@ Le site utilise une palette sombre avec des accents bleus pour rappeler un envir
 
 ## Authors
 
-- [John-Natty](https://github.com/John-Natty)
 - [Souf-F](https://github.com/Souf-F)
+- [John-Natty](https://github.com/John-Natty)
