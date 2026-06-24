@@ -37,7 +37,7 @@ nav {
 /* Titre "Fantôme du Ciel" au centre de la barre */
 .nav-logo {
   font-family: "Playfair Display", serif;
-  color: #ffb000;
+  color: #6fb5ff;
   letter-spacing: 0.18em;
   font-size: 38px;
   text-transform: uppercase;
@@ -65,7 +65,7 @@ nav {
   content: "[";
   opacity: 0;
   margin-right: 6px;
-  color: #ffb000;
+  color: #6fb5ff;
   transition: opacity 0.2s ease;
 }
 
@@ -73,12 +73,12 @@ nav {
   content: "]";
   opacity: 0;
   margin-left: 6px;
-  color: #ffb000;
+  color: #6fb5ff;
   transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #ffb000;
+  color: #6fb5ff;
 }
 
 .nav-links a:hover::before,
