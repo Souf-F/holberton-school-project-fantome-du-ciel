@@ -1,6 +1,6 @@
 <!-- Mets l'image vol.webp dans ton dossier assets -->
 <p align="center">
-  <img src="assets/vol.webp" alt="B-2 Spirit au-dessus de l'orage" width="100%">
+  <img src="assets/vol.jpg" alt="B-2 Spirit au-dessus de l'orage" width="100%">
 </p>
 <h1 align="center">✈️ FANTÔME DU CIEL</h1>
  
