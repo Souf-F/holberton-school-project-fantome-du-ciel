@@ -37,7 +37,7 @@ Le site présente le B-2 Spirit à travers cinq thèmes : son accueil, sa furtiv
 | 🏠 **Accueil** | `index.html` | Hero plein écran avec vidéo de fond, bandes cinéma, navigation. |
 | 🛡️ **Furtivité** | `index.html#furtivite` | Pourquoi le B-2 est invisible aux radars. |
 | 🎯 **Mission** | `mission.html` | Trois opérations de combat réelles. |
-| 📊 **Caractéristiques** | `index.html#caracteristiques` | Les spécifications techniques de l'appareil. |
+| 🔧 **Caractéristiques** | `index.html#caracteristiques` | Les spécifications techniques de l'appareil. |
 | 💥 **Armement** | `armement.html` | Les moyens d'attaque, bombes et missile standoff. |
 
 ---
