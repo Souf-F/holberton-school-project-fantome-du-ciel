@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset : marge interne incluse dans la taille, liens sans soulignement */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Couleur de fond du site entier */
+body {
+  background-color: #000000;
+}
+
+/* Barre de navigation : logo en haut, liens centrés dessous */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+}
+
+/* Logo image, calé à gauche sans déformer la barre */
+.nav-logo-img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  height: 60px;
+}
+
+/* Titre "Fantôme du Ciel" au centre de la barre */
+.nav-logo {
+  font-family: "Playfair Display", serif;
+  color: #ffb000;
+  letter-spacing: 0.18em;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+/* Conteneur des liens */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  margin-top: 18px;
+}
+
+/* Liens : style + survol ambre, crochets [ ] qui apparaissent au hover */
+.nav-links a {
+  position: relative;
+  color: #c7c7cf;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::before {
+  content: "[";
+  opacity: 0;
+  margin-right: 6px;
+  color: #ffb000;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "]";
+  opacity: 0;
+  margin-left: 6px;
+  color: #ffb000;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb000;
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+  opacity: 1;
+}
+
+/* Section d'accueil en plein écran */
+.section1 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+/* Vidéo de fond */
+.section1 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Voile dégradé noir en haut et en bas de la vidéo */
+.section1-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    black 0%,
+    transparent 25%,
+    transparent 75%,
+    black 100%
+  );
+}
+
+/* Bloc titre/accroche centré par-dessus la vidéo */
+.hero-content {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: center;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}

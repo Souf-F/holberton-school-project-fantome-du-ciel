@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantôme du Ciel</title>
+  <link rel="stylesheet" href="armement.css">
+</head>
+<body>
+
+  <!-- Barre de navigation, identique aux autres pages -->
+  <header>
+    <nav>
+      <img src="assets/logo.svg" alt="Logo FDC" class="nav-logo-img">
+      <span class="nav-logo">Fantôme du Ciel</span>
+      <div class="nav-links">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="furtivité.html">Furtivité</a>
+        <a href="mission.html">Mission</a>
+        <a href="caracteristiques.html#caracteristiques">Caractéristiques</a>
+        <a href="armement.html">Armement</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Section principale -->
+  <section class="arm-section">
+
+    <h1>Moyens d'attaque</h1>
+    <p class="arm-quote">Il frappe à 1 000 km, puis s'efface.</p>
+    <p class="arm-text">
+      Le B-2 emporte deux familles d'armes très différentes : des bombes,
+      larguées à la verticale de la cible, et un missile de croisière standoff,
+      tiré à très longue distance pour que l'avion n'entre jamais dans la
+      défense ennemie.
+    </p>
+
+    <!-- ===================== FAMILLE 1 : LES BOMBES ===================== -->
+    <h2 class="arm-family">Les bombes</h2>
+    <div class="arm-grid">
+
+      <article class="arm-card">
+        <img src="assets/gpu_57.jpg" alt="Bombe GBU-57 MOP" class="arm-img">
+        <h3>GBU-57 MOP</h3>
+        <p class="arm-range">~14 tonnes · anti-bunker</p>
+        <p class="arm-effect">
+          La massue perforatrice. Elle traverse le béton et la roche avant
+          d'exploser au cœur des cibles enterrées.
+        </p>
+      </article>
+
+      <article class="arm-card">
+        <img src="assets/jdam.jpg" alt="Bombe guidée JDAM" class="arm-img">
+        <h3>JDAM</h3>
+        <p class="arm-range">~28 km · guidage GPS</p>
+        <p class="arm-effect">
+          Un kit de guidage greffé sur des bombes classiques. Précision
+          métrique, par tous les temps, de jour comme de nuit.
+        </p>
+      </article>
+
+      <article class="arm-card">
+        <img src="assets/b61.jpg" alt="Bombe nucléaire B61" class="arm-img">
+        <h3>B61 / B83</h3>
+        <p class="arm-range">nucléaire · gravité</p>
+        <p class="arm-effect">
+          Les bombes de la dissuasion stratégique. Puissance réglable,
+          larguées en haute altitude.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- ===================== FAMILLE 2 : LE MISSILE STANDOFF ===================== -->
+    <h2 class="arm-family">Le missile standoff</h2>
+    <div class="arm-grid">
+
+      <article class="arm-card arm-card-wide">
+        <img src="assets/jassm.jpg" alt="Missile de croisière AGM-158 JASSM" class="arm_jassm-img">
+        <h3>AGM-158 JASSM</h3>
+        <p class="arm-range">plus de 1 000 km · missile de croisière furtif</p>
+        <p class="arm-effect">
+          L'arme du « tir à distance ». L'avion lance le missile à plus de mille
+          kilomètres de l'objectif, puis fait demi-tour sans jamais entrer dans
+          la portée des défenses adverses. Il frappe, puis s'efface.
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

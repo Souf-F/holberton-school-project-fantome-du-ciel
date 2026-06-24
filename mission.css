@@ -1,0 +1,166 @@
+/* Police du titre de la nav */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fond anthracite et texte clair, ambiance radar nocturne */
+body {
+  background-color: #0d1117;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Barre de navigation */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+}
+
+.nav-logo-img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  height: 60px;
+}
+
+/* Titre de la nav en bleu acier */
+.nav-logo {
+  font-family: "Playfair Display", serif;
+  color: #6fb5ff;
+  letter-spacing: 0.18em;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  margin-top: 18px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #c2cdda;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::before {
+  content: "[";
+  opacity: 0;
+  margin-right: 6px;
+  color: #6fb5ff;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "]";
+  opacity: 0;
+  margin-left: 6px;
+  color: #6fb5ff;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #6fb5ff;
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+  opacity: 1;
+}
+
+/* Section principale */
+.mission-section {
+  padding: 160px 10% 60px;
+}
+
+/* Titre principal : nom du B-2 en bleu acier */
+.mission-section h1 {
+  font-size: 3rem;
+  color: #6fb5ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+/* Phrase d'accroche en italique */
+.mission-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #a8c5e8;
+  margin-bottom: 25px;
+}
+
+/* Texte d'introduction */
+.mission-text {
+  max-width: 750px;
+  color: #c2cdda;
+  margin-bottom: 50px;
+}
+
+/* Un bloc = une image + un texte côte à côte */
+.mission-block {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: #161c26;
+  border: 1px solid rgba(111, 181, 255, 0.35);
+  border-radius: 16px;
+  padding: 25px;
+}
+/* Effet quand la souris passe sur une carte */
+.mission-block:hover {
+  transform: translateY(-8px);
+  border-color: #6fb5ff;
+}
+
+/* L'image de chaque bloc */
+.mission-img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Le texte à côté de l'image */
+.mission-info h3 {
+  color: #6fb5ff;
+  margin-bottom: 12px;
+}
+
+.mission-info p {
+  color: #c2cdda;
+}
+
+/* Sur petit écran, l'image passe au-dessus du texte */
+@media (max-width: 800px) {
+  .mission-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mission-img {
+    width: 100%;
+  }
+}
