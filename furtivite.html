@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+
+    <!-- Rend la page responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>Furtivité - Fantôme du Ciel</title>
+
+    <!-- CSS commun du site -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS spécifique à la page Furtivité -->
+    <link rel="stylesheet" href="furtivite.css">
+  </head>
+
+  <body>
+    <!-- Header commun à toutes les pages -->
+    <header>
+      <nav>
+        <img src="assets/logo.svg" alt="Logo FDC" class="nav-logo-img">
+        <span class="nav-logo">Fantôme du Ciel</span>
+
+        <div class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="furtivite.html">Furtivité</a>
+          <a href="mission.html">Mission</a>
+          <a href="caracteristiques.html">Caractéristiques</a>
+          <a href="armement.html">Armement</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+      <!-- Section consacrée à la furtivité du B-2 Spirit -->
+      <section class="stealth-section" id="furtivite">
+        <div class="stealth-content">
+          <p class="stealth-kicker">Northrop B-2 Spirit</p>
+          <h1>Furtivité</h1>
+
+          <!-- Phrase d'accroche de la section -->
+          <p class="stealth-quote">
+            Un avion de 52 mètres d’envergure, pensé pour apparaître comme une ombre.
+          </p>
+
+          <!-- Texte principal qui explique l'idée générale -->
+          <p class="stealth-text">
+            Le B-2 Spirit n’est pas seulement sombre : toute sa silhouette est pensée pour réduire les signatures radar, 
+            infrarouge, acoustique, électromagnétique et visuelle. Sa forme d’aile volante, 
+            ses matériaux composites et ses revêtements spéciaux participent à sa furtivité.
+          </p>
+        </div>
+
+        <!-- Cartes explicatives et radar de la section furtivité -->
+        <div class="stealth-layout">
+          <article class="stealth-card">
+            <h2>La silhouette qui dévie les radars</h2>
+            <p>
+              Sans dérive verticale, son aile volante casse la silhouette classique
+              d'un avion. Cette forme limite les angles capables de renvoyer les
+              ondes radar directement vers leur source.
+            </p>
+          </article>
+
+          <article class="stealth-card">
+            <h2>Un revêtement qui absorbe une partie des ondes</h2>
+            <p>
+              Le B-2 Spirit utilise des matériaux absorbants appelés RAM <em>Radar Absorbent Material</em>. 
+              Ce revêtement ne rend pas l'avion totalement invisible, 
+              mais il permet d'absorber une partie des ondes radar au lieu de les renvoyer directement vers l'antenne ennemie. 
+              Combiné à sa forme d'aile volante, il réduit fortement sa signature radar.
+            </p>
+          </article>
+
+          <article class="stealth-card">
+            <h2>Chaleur masquée</h2>
+            <p>
+              Les moteurs du B-2 sont intégrés dans la structure de l'aile afin de limiter sa signature thermique. 
+              Ses tuyères en V, placées sur la partie supérieure, 
+              aident à disperser les gaz chauds et à les rendre moins visibles depuis le sol. 
+              Même les traînées de condensation peuvent trahir un avion furtif : 
+              c'est pourquoi la gestion de la chaleur et des traces visibles fait partie de son invisibilité globale.
+            </p>
+          </article>
+
+          <!-- Bloc visuel radar de la section furtivité -->
+          <div class="radar-visual">
+            <div class="radar">
+              <div class="sweep"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+        <p class="footer-left">© 2026 Tous droits réservés</p>
+        <p class="footer-center">Présenté par Jonathan et Soufiane · Projet Holberton School</p>
+      <div class="footer-right">
+        <a href="https://github.com/John-Natty" target="_blank">GitHub Jonathan</a>
+        <a href="https://github.com/Souf-F" target="_blank">GitHub Soufiane</a>
+      </div>
+    </footer>
+  </body>
+</html>

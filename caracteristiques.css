@@ -1,0 +1,409 @@
+/* Reset simple pour garder une page stable */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base visuelle de la page : fond sombre et texte clair */
+body {
+  background-color: #0d1117;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Lien actif dans la navigation */
+.nav-links a.active {
+  color: #6fb5ff;
+}
+
+.nav-links a.active::before,
+.nav-links a.active::after {
+  opacity: 1;
+}
+
+/* Grande section principale avec image de fond et voile sombre */
+.specs-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 170px 10% 90px;
+  background:
+    linear-gradient(rgba(13, 17, 23, 0.58), rgba(13, 17, 23, 0.82)),
+    url("assets/b2-clouds.jpg") center / cover no-repeat,
+    linear-gradient(135deg, #0d1117 0%, #161c26 100%);
+}
+
+/* Couche visuelle supplémentaire pour renforcer la lisibilité du contenu */
+.specs-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(13, 17, 23, 0.92), rgba(13, 17, 23, 0.2)),
+    radial-gradient(circle at 78% 22%, rgba(111, 181, 255, 0.2), transparent 32%);
+}
+
+/* Bloc d'introduction : titre, accroche et petit texte de contexte */
+.specs-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+/* Colonne de texte du hero */
+.specs-hero-text {
+  max-width: 920px;
+}
+
+/* Petit surtitre au-dessus du H1 */
+.specs-kicker {
+  color: #6fb5ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Titre principal de la page caractéristiques */
+.specs-hero h1 {
+  color: #6fb5ff;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+/* Citation courte et plus douce sous le titre */
+.specs-quote {
+  color: #a8c5e8;
+  font-size: 1.35rem;
+  font-style: italic;
+  margin-bottom: 22px;
+  max-width: 820px;
+}
+
+/* Texte d'introduction avant les cartes */
+.specs-intro {
+  color: #c2cdda;
+  font-size: 1.05rem;
+  max-width: 760px;
+}
+
+/* Image isolée du B-2 placée dans la zone droite du hero */
+.specs-plane-visual {
+  --plane-rotation: 20deg;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 300px;
+  perspective: 1000px;
+  transition: transform 0.25s ease;
+}
+
+.specs-plane-visual:hover {
+  transform: scale(1.02);
+}
+
+/* Zones invisibles qui déclenchent l'inclinaison selon la position de la souris */
+.plane-tilt-zone {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  height: 50%;
+}
+
+.specs-plane-visual img {
+  width: min(100%, 680px);
+  max-height: 360px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 28px 52px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 32px rgba(111, 181, 255, 0.22));
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0, 0, 0, 1);
+  will-change: transform;
+}
+
+.plane-tilt-zone.top-left {
+  top: 0;
+  left: 0;
+}
+
+.plane-tilt-zone.top-left:hover ~ img {
+  transform: rotate3d(-1, 1, 0, var(--plane-rotation));
+}
+
+.plane-tilt-zone.top-right {
+  top: 0;
+  right: 0;
+}
+
+.plane-tilt-zone.top-right:hover ~ img {
+  transform: rotate3d(-1, -1, 0, var(--plane-rotation));
+}
+
+.plane-tilt-zone.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.plane-tilt-zone.bottom-left:hover ~ img {
+  transform: rotate3d(1, 1, 0, var(--plane-rotation));
+}
+
+.plane-tilt-zone.bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+.plane-tilt-zone.bottom-right:hover ~ img {
+  transform: rotate3d(1, -1, 0, var(--plane-rotation));
+}
+
+.plane-tilt-zone.top-middle {
+  top: 0;
+  right: 35%;
+  bottom: 50%;
+  left: 35%;
+  width: auto;
+  height: auto;
+}
+
+.plane-tilt-zone.top-middle:hover ~ img {
+  transform: rotate3d(-1, 0, 0, var(--plane-rotation));
+}
+
+.plane-tilt-zone.bottom-middle {
+  top: 50%;
+  right: 35%;
+  bottom: 0;
+  left: 35%;
+  width: auto;
+  height: auto;
+}
+
+.plane-tilt-zone.bottom-middle:hover ~ img {
+  transform: rotate3d(1, 0, 0, var(--plane-rotation));
+}
+
+/* Grille principale des caractéristiques */
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Carte de caractéristique individuelle */
+.spec-card {
+  min-height: 220px;
+  padding: 22px;
+  background: rgba(22, 28, 38, 0.88);
+  border: 1px solid rgba(111, 181, 255, 0.32);
+  border-radius: 8px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+/* Petit mouvement au survol pour rendre les cartes plus vivantes */
+.spec-card:hover {
+  transform: translateY(-6px);
+  border-color: #6fb5ff;
+}
+
+/* Carte plus large pour une information importante */
+.spec-card-large {
+  grid-column: span 2;
+}
+
+/* Carte plus haute pour donner du poids visuel à l'autonomie */
+.spec-card-tall {
+  grid-row: span 2;
+}
+
+/* Carte du coût, volontairement plus large */
+.spec-card-cost {
+  grid-column: span 2;
+}
+
+/* Libellé au-dessus du grand chiffre */
+.spec-label {
+  display: block;
+  color: #a8c5e8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Grand chiffre mis en avant dans chaque carte */
+.spec-card strong {
+  display: block;
+  color: #6fb5ff;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+/* Description courte dans chaque carte */
+.spec-card p {
+  color: #c2cdda;
+  font-size: 0.96rem;
+}
+
+/* Panneau final qui résume pourquoi ces chiffres sont impressionnants */
+.impact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 36px;
+  align-items: center;
+  margin-top: 34px;
+  padding: 30px;
+  background: rgba(13, 17, 23, 0.72);
+  border: 1px solid rgba(111, 181, 255, 0.3);
+  border-radius: 8px;
+}
+
+/* Titre du panneau final */
+.impact-panel h2 {
+  color: #6fb5ff;
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Couleur commune du texte dans le panneau final */
+.impact-panel p,
+.impact-list {
+  color: #c2cdda;
+}
+
+/* Liste des faits marquants */
+.impact-list {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+}
+
+/* Chaque ligne de la liste reçoit un petit marqueur personnalisé */
+.impact-list li {
+  position: relative;
+  padding-left: 24px;
+}
+
+/* Trait bleu utilisé comme puce */
+.impact-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background: #6fb5ff;
+}
+
+/* Tablettes : la grille passe de 4 colonnes à 2 colonnes */
+@media (max-width: 1050px) {
+  .specs-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-plane-visual {
+    justify-content: center;
+    min-height: 240px;
+  }
+
+  .specs-plane-visual img {
+    max-height: 300px;
+  }
+
+  .specs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobiles : tout passe en une seule colonne */
+@media (max-width: 760px) {
+  .specs-section {
+    padding: 150px 7% 70px;
+  }
+
+  .specs-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .specs-plane-visual {
+    min-height: 180px;
+  }
+
+  .specs-plane-visual img {
+    max-height: 220px;
+  }
+
+  .specs-grid,
+  .impact-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-card-large,
+  .spec-card-cost {
+    grid-column: span 1;
+  }
+
+  .spec-card-tall {
+    grid-row: span 1;
+  }
+}
+/* Footer : barre noire, texte blanc, 3 zones */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-size: 0.85rem;
+}
+
+.footer-left,
+.footer-center {
+  margin: 0;
+}
+
+/* Les liens GitHub à droite */
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.footer-right a:hover {
+  opacity: 0.6;
+}
+
+/* Sur petit écran, tout passe en colonne et se centre */
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
