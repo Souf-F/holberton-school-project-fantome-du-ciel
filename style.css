@@ -86,12 +86,14 @@ nav {
   opacity: 1;
 }
 
-/* Section d'accueil en plein écran */
 .section1 {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 70px);
   overflow: hidden;
   background-color: black;
+  border-top: 140px solid black;     /* assez haut pour titre + liens */
+  border-bottom: 70px solid black;
+  box-sizing: border-box;
 }
 
 /* Vidéo de fond */
