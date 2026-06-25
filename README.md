@@ -92,6 +92,9 @@ Deux familles d'armes clairement distinguées :
 - **Le missile standoff** — AGM-158 JASSM, qui frappe à plus de 1 000 km : *« il frappe, puis s'efface »*.
 
 ---
+## Identite visuelle
+
+Le site utilise une palette sombre avec des accents bleus pour rappeler un environnement aerien, nocturne et technologique. Les pages conservent une navigation commune afin de garder une experience fluide entre les sections.
 
 ## 🎨 Design
 
@@ -126,6 +129,21 @@ git clone https://github.com/Souf-F/holberton-school-project-fantome-du-ciel.git
 cd holberton-school-project-fantome-du-ciel
 ```
 
+Le site peut etre ouvert directement depuis `index.html`.
+
+Il est aussi possible de lancer un serveur local :
+
+ou
+
+```bash
+python3 -m http.server 4173 --bind 127.0.0.1
+```
+
+Puis ouvrir :
+
+```text
+http://127.0.0.1:4173
+```
 Puis ouvre `index.html` dans ton navigateur (ou avec l'extension **Live Server** sur VS Code).
 
 ---
