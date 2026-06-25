@@ -93,9 +93,12 @@ nav {
 /* Section d'accueil en plein écran */
 .section1 {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 70px);
   overflow: hidden;
   background-color: black;
+  border-top: 140px solid black;     /* assez haut pour titre + liens */
+  border-bottom: 70px solid black;
+  box-sizing: border-box;
 }
 
 /* Vidéo de fond */
@@ -132,5 +135,44 @@ nav {
   text-align: center;
   color: white;
   font-family: "Raleway", sans-serif;
+}
+/* Footer : barre noire, texte blanc, 3 zones */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-size: 0.85rem;
+}
 
+.footer-left,
+.footer-center {
+  margin: 0;
+}
+
+/* Les liens GitHub à droite */
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.footer-right a:hover {
+  opacity: 0.6;
+}
+
+/* Sur petit écran, tout passe en colonne et se centre */
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
 }

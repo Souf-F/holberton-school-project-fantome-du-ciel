@@ -229,7 +229,7 @@ h3 {
     transform: none;
   }
 }
-/* Footer : barre noire, texte blanc, 3 zones */
+/* Footer : barre, texte blanc, 3 zones */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -245,7 +245,6 @@ h3 {
   margin: 0;
 }
 
-/* Les liens GitHub à droite */
 .footer-right {
   display: flex;
   gap: 20px;
@@ -261,7 +260,6 @@ h3 {
   opacity: 0.6;
 }
 
-/* Sur petit écran, tout passe en colonne et se centre */
 @media (max-width: 800px) {
   .footer {
     flex-direction: column;
@@ -269,3 +267,10 @@ h3 {
     text-align: center;
   }
 }
+.stealth-kicker {
+  color: #6fb5ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
+  text-transform: uppercase; }
