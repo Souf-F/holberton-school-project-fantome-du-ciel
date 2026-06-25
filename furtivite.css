@@ -1,0 +1,231 @@
+/* Reset simple pour enlever les marges par défaut du navigateur */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Permet un scroll fluide dans la page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style général du site */
+body {
+  background-color: #0d1117; /* Fond anthracite très foncé */
+  color: #ffffff;            /* Texte blanc */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Style commun à toutes les sections */
+section {
+  min-height: 100vh;
+  padding: 80px 10%;
+}
+
+/* Style général des titres */
+h1,
+h2,
+h3 {
+  color: #6fb5ff;
+}
+
+/* Petit surtitre au-dessus du H1 */
+.stealth-kicker {
+  color: #6fb5ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Section Furtivité : ambiance sombre et technologique */
+.stealth-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(13, 17, 23, 0.28), rgba(13, 17, 23, 0.42)),
+    url("assets/b2-clouds.jpg") center / cover no-repeat,
+    linear-gradient(135deg, #0d1117 0%, #161c26 100%);
+  color: #ffffff;
+  padding: 170px 10% 100px;
+}
+
+.stealth-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Bloc principal du texte de la section */
+.stealth-content {
+  max-width: 960px;
+  margin-bottom: 50px;
+}
+
+/* Titre de la section Furtivité */
+.stealth-content h1,
+.stealth-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Phrase d'accroche */
+.stealth-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #a8c5e8;
+  margin-bottom: 25px;
+}
+
+/* Texte explicatif principal */
+.stealth-text {
+  max-width: 750px;
+  font-size: 1.1rem;
+  color: #c2cdda;
+}
+
+/* Grille des cartes et du radar */
+.stealth-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 70px 44px;
+  align-items: center;
+}
+
+/* Carte individuelle */
+.stealth-card {
+  background: #161c26;
+  border: 1px solid rgba(111, 181, 255, 0.35);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(2px);
+  min-height: 210px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stealth-card:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.stealth-card:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.stealth-card:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Titre de chaque carte */
+.stealth-card h2,
+.stealth-card h3 {
+  margin-bottom: 15px;
+  color: #6fb5ff;
+  font-size: 1.2rem;
+}
+
+/* Texte dans les cartes */
+.stealth-card p {
+  color: #c2cdda;
+  font-size: 0.95rem;
+}
+
+/* Effet quand la souris passe sur une carte */
+.stealth-card:hover {
+  transform: translateY(-8px);
+  border-color: #6fb5ff;
+}
+/* Zone qui contient le radar */
+.radar-visual {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: 2%;
+  transform: translate(6%, -95px);
+}
+
+/* Radar principal */
+.radar {
+  position: relative;
+  overflow: hidden;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(111, 181, 255, 0.4),
+    0 0 35px rgba(111, 181, 255, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+
+  background:
+    repeating-radial-gradient(
+      transparent 0 23px,
+      rgba(111, 181, 255, 0.45) 24px 26px,
+      transparent 27px
+    ),
+    linear-gradient(
+      transparent 49.75%,
+      rgba(111, 181, 255, 0.5) 50%,
+      transparent 50.25%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 49.75%,
+      rgba(111, 181, 255, 0.5) 50%,
+      transparent 50.25%
+    ),
+    radial-gradient(circle, #16283d 0%, #0d1117 70%);
+}
+
+/* Balayage du radar */
+.sweep {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 156px;
+  height: 156px;
+  border-radius: 100% 0 0 0;
+  transform-origin: 100% 100%;
+  background: linear-gradient(
+    50deg,
+    rgba(13, 17, 23, 0) 56%,
+    rgba(111, 181, 255, 0.85)
+  );
+  animation: sweep 5s infinite linear;
+}
+
+/* Animation de rotation du balayage */
+@keyframes sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .stealth-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .stealth-card:nth-child(1),
+  .stealth-card:nth-child(2),
+  .stealth-card:nth-child(3),
+  .radar-visual {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .radar-visual {
+    justify-content: center;
+    padding-right: 0;
+    transform: none;
+  }
+}

@@ -1,4 +1,3 @@
-<!-- Mets l'image vol.jpg dans ton dossier assets -->
 <p align="center">
   <img src="assets/vol.jpg" alt="B-2 Spirit au-dessus de l'orage" width="100%">
 </p>
@@ -160,3 +159,4 @@ Projet réalisé par **Jonathan** et **Soufiane**.
 <p align="center">
   <i>FANTÔME DU CIEL · B-2 Spirit</i>
 </p>
+

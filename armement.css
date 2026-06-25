@@ -196,6 +196,7 @@ nav {
     grid-template-columns: 1fr;
   }
 }
+
 /* Footer : barre, texte blanc, 3 zones */
 .footer {
   display: flex;
@@ -234,3 +235,10 @@ nav {
     text-align: center;
   }
 }
+.stealth-kicker {
+  color: #6fb5ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
+  text-transform: uppercase; }
